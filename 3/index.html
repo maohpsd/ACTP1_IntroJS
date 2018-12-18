@@ -14,6 +14,19 @@
   <head>
     <meta charset="utf-8">
     <title></title>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+
+    <style>
+
+    #row-3 td {
+
+      transition: all 1s;
+
+      }
+
+    </style>
+    
+    
   </head>
   <body>
     <h1> Hey !! </h1>
@@ -62,5 +75,35 @@
 
       </fieldset>
     </form>
+    <script>
+      $("h1").css("color", "red")
+      $(".section-1").css("background-color", "yellow")
+
+
+      function sumar() {
+
+      var counter = $(".counter").text();
+      counter = parseInt(counter)
+      counter = counter + 10
+      $(".counter").text(counter);
+
+      }
+
+      $("h1").click(function() {
+
+        sumar();
+      })
+
+      $("#row-3").click(function() {
+
+      $("#row-3 td").css("background-color", "grey");
+
+      })
+
+       $(".section-1 h1").css("font-size", "4em");
+
+       $("tr:last-child").css ("background-color", "red");
+
+    </script>
   </body>
 </html>
